@@ -11,25 +11,25 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 <name>selam2ndattempt</name>
 
     <properties>
-<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-<app.runtime>4.2.2</app.runtime>
-<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
-</properties>
+     <app.runtime>4.2.2</app.runtime>
+     <mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
+    </properties>
 
 <build>
 <plugins>
-<plugin>
-<groupId>org.mule.tools.maven</groupId>
-<artifactId>mule-maven-plugin</artifactId>
-<version>${mule.maven.plugin.version}</version>
-<extensions>true</extensions>
-<configuration>
-<cloudHubDeployment>
+   <plugin>
+    <groupId>org.mule.tools.maven</groupId>
+    <artifactId>mule-maven-plugin</artifactId>
+    <version>${mule.maven.plugin.version}</version>
+    <extensions>true</extensions>
+ <configuration>
+   <cloudHubDeployment>
 
 
- <uri>https://anypoint.mulesoft.com</uri>
+         <uri>https://anypoint.mulesoft.com</uri>
          <muleVersion>${mule.version}</muleVersion>
          <username>${username}</username>
          <password>${password}</password>
@@ -39,16 +39,16 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
          <applicationName>${application.name}</applicationName>
          <objectStoreV2>true</objectStoreV2>
          
-                  </cloudHubDeployment>
-</configuration>
-</plugin>
-<plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-deploy-plugin</artifactId>
-  <configuration>
+      </cloudHubDeployment>
+   </configuration>
+  </plugin>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-deploy-plugin</artifactId>
+    <configuration>
     <skip>true</skip>
-  </configuration>
-</plugin>
+    </configuration>
+   </plugin>
 </plugins>
 </build>
 
